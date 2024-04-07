@@ -1,0 +1,11 @@
+include:
+  - ../../server/docker-compose.yml
+  - ../../admin-ui/docker-compose.devcontainer.yml
+version: "3"
+services:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/base:debian
+    command: sleep infinity
+    links:
+      - server
+      - admin-ui
